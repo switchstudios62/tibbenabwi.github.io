@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tibb-e-Nabwi | Heal With Tibb-e-Nabwi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f8f7f1;--cream2:#efeee6;--ink:#13271f;--green:#173d31;--green2:#0d2920;--sage:#9cad9d;--gold:#b89a62;--line:#d9d9ce;--muted:#667168;--white:#fff;--serif:"DM Serif Display",serif;--sans:Inter,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--cream);color:var(--ink);overflow-x:hidden}a{text-decoration:none;color:inherit}img,video{display:block;width:100%}.container{width:min(1180px,calc(100% - 48px));margin:auto}section{padding:110px 0}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.18em;color:var(--gold);font-weight:700;display:flex;gap:10px;align-items:center;margin-bottom:18px}.eyebrow:before{content:"";width:28px;height:1px;background:currentColor}h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.02}h2{font-size:clamp(42px,5vw,70px);letter-spacing:-.04em}.lead{color:var(--muted);line-height:1.8;font-size:15px}.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 23px;background:var(--green);color:white;border:1px solid var(--green);font-size:12px;font-weight:700;letter-spacing:.04em;transition:.3s}.btn:hover{background:var(--gold);border-color:var(--gold);transform:translateY(-2px)}.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}.btn.ghost:hover{color:white;background:var(--green)}
+/* NAV */
+header{position:fixed;z-index:50;top:0;width:100%;border-bottom:1px solid transparent;transition:.35s}header.scrolled{background:rgba(248,247,241,.92);backdrop-filter:blur(16px);border-color:var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:14px}.brand img{width:36px;height:36px;object-fit:cover;border-radius:50%}.links{display:flex;gap:28px;font-size:12px;color:#536057}.links a:hover{color:var(--gold)}.menu{display:none;border:0;background:none;font-size:22px}
+/* HERO */
+.hero{min-height:100svh;padding:0;position:relative;background:#10271f;color:white;display:flex;align-items:flex-end;overflow:hidden}.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.72}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,26,20,.9) 0%,rgba(8,26,20,.54) 45%,rgba(8,26,20,.12) 100%),linear-gradient(0deg,rgba(8,26,20,.7),transparent 50%)}.hero-grid{position:relative;z-index:2;width:min(1180px,calc(100% - 48px));margin:auto;padding:150px 0 65px;display:grid;grid-template-columns:1.15fr .85fr;align-items:end;gap:40px}.hero .eyebrow{color:#e4c995}.hero h1{font-size:clamp(65px,9vw,132px);max-width:850px;letter-spacing:-.06em}.hero h1 em{font-style:italic;color:#e7d1a5}.hero-copy p{max-width:530px;margin:26px 0 30px;color:#e2e8e0;line-height:1.8}.hero-side{justify-self:end;align-self:end;width:260px;padding:22px;border-left:1px solid rgba(255,255,255,.3)}.hero-side p{font-size:11px;line-height:1.7;color:#d3dbd4}.hero-bottom{position:absolute;z-index:3;bottom:0;left:0;width:100%;border-top:1px solid rgba(255,255,255,.2)}.hero-meta{height:72px;display:flex;align-items:center;justify-content:space-between;color:#dbe3dc;font-size:10px;text-transform:uppercase;letter-spacing:.12em}.scroll-line{display:flex;gap:12px;align-items:center}.scroll-line:before{content:"";width:42px;height:1px;background:var(--gold)}
+/* INTRO */
+.intro{background:var(--white)}.intro-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:110px;align-items:center}.intro-image{position:relative}.intro-image img{height:570px;object-fit:cover;filter:saturate(.8)}.image-tag{position:absolute;right:-30px;bottom:30px;background:var(--green);color:white;padding:28px;width:190px}.image-tag span{font-family:var(--serif);font-size:35px;color:#e5cd9f;display:block}.intro-copy>p{max-width:570px;margin-top:24px}.hadith{background:var(--green2);padding:34px;margin:30px 0;color:white}.arabic{font-family:Amiri;font-size:28px;direction:rtl;line-height:1.8;color:#eee5d4}.hadith p{font-size:13px;color:#d7ded8;margin-top:13px;line-height:1.7}.hadith small{display:block;margin-top:15px;color:var(--gold);letter-spacing:.1em}
+/* FOUNDER */
+.founder{background:var(--cream2)}.founder-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:100px}.sticky{position:sticky;top:105px}.founder-img{height:600px;object-fit:cover}.caption{font-size:12px;margin-top:15px;color:var(--muted)}.caption b{color:var(--green);display:block}.story{border-top:1px solid var(--line);margin-top:38px}.story-item{display:grid;grid-template-columns:60px 1fr;gap:20px;padding:28px 0;border-bottom:1px solid var(--line)}.story-item span{color:var(--gold);font-size:11px;font-weight:700}.story-item h3{font-size:29px}.story-item p{font-size:14px;color:var(--muted);line-height:1.75;margin-top:9px}
+/* COURSE */
+.course{background:#fff}.section-head{max-width:700px;margin-bottom:60px}.course-layout{display:grid;grid-template-columns:260px 1fr;gap:80px}.rail{position:sticky;top:105px;border-left:1px solid var(--line)}.rail a{display:block;padding:13px 0 13px 20px;font-size:12px;color:var(--muted);border-left:2px solid transparent;margin-left:-1px}.rail a:hover,.rail a.active{border-color:var(--gold);color:var(--green);font-weight:700}.course-block{padding:0 0 48px;margin-bottom:48px;border-bottom:1px solid var(--line)}.course-block h3{font-size:38px;margin-bottom:22px}.clean-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 35px}.clean-list li{padding:13px 0;border-top:1px solid #ecece5;font-size:14px;color:#4e5b53}.clean-list li:before{content:"✦";color:var(--gold);margin-right:10px}.tags{display:flex;flex-wrap:wrap;gap:10px}.tags span{border:1px solid var(--line);padding:10px 15px;font-size:12px;background:var(--cream)}.course-banner{background:var(--green2);padding:42px;color:white;display:flex;justify-content:space-between;align-items:center;gap:25px}.course-banner h3{font-size:36px}.course-banner p{font-size:12px;color:#cbd7ce;margin-top:8px}
+/* REMEDIES */
+.remedies{background:var(--green2);color:white}.remedies h2{color:white}.remedies .lead{color:#bfcac1}.remedy-grid{margin-top:60px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.15);border-left:1px solid rgba(255,255,255,.15)}.remedy-card{min-height:270px;padding:30px;border-right:1px solid rgba(255,255,255,.15);border-bottom:1px solid rgba(255,255,255,.15);transition:.4s;position:relative;overflow:hidden}.remedy-card:hover{background:#173d31}.remedy-card .num{color:var(--gold);font-size:11px}.remedy-card h3{font-size:30px;margin:55px 0 12px}.remedy-card p{font-size:12px;line-height:1.7;color:#bfcac1}
+/* ARCHIVE */
+.archive{background:var(--cream)}.archive-top{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:50px}.archive-track{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.archive-card{background:white;border:1px solid var(--line);padding:10px;transition:.35s}.archive-card:hover{transform:translateY(-8px) rotate(-1deg);box-shadow:0 25px 50px rgba(15,42,33,.12)}.archive-card img{aspect-ratio:3/4;object-fit:cover}.archive-card div{padding:14px 7px 5px}.archive-card small{color:var(--gold);font-size:10px;text-transform:uppercase;letter-spacing:.1em}.archive-card p{font-family:var(--serif);font-size:20px;margin-top:5px}
+/* CONTACT */
+.contact{background:white}.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:100px}.info-row{padding:20px 0;border-bottom:1px solid var(--line)}.info-row small{color:var(--gold);text-transform:uppercase;letter-spacing:.1em}.info-row p{font-size:14px;margin-top:7px;color:var(--muted)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{padding:16px;border:1px solid var(--line);font:inherit;background:#fff;outline:none;width:100%}.field:focus{border-color:var(--gold)}textarea.field{min-height:130px;grid-column:1/-1;resize:vertical}.form-actions{margin-top:18px}
+/* FOOTER */
+footer{background:var(--green2);color:#c8d1ca;padding:70px 0 25px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:60px}.footer-brand{font-family:var(--serif);font-size:35px;color:white}.footer-grid h4{font-size:12px;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px}.footer-grid li{list-style:none;margin:10px 0;font-size:12px}.copyright{margin-top:60px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:10px;display:flex;justify-content:space-between}
+.reveal{opacity:0;transform:translateY(24px);transition:.8s ease}.reveal.in{opacity:1;transform:none}
+@media(max-width:850px){.links{display:none}.menu{display:block}.hero-grid,.intro-grid,.founder-grid,.course-layout,.contact-grid{grid-template-columns:1fr}.hero h1{font-size:72px}.hero-side{display:none}.intro-image img{height:420px}.sticky{position:static}.rail{display:flex;overflow:auto;position:sticky;top:75px;background:white;z-index:4;border:0;border-bottom:1px solid var(--line)}.rail a{white-space:nowrap;padding:15px}.clean-list,.form-grid{grid-template-columns:1fr}.remedy-grid,.archive-track{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr}.course-layout{gap:30px}.hero-bottom{display:none}.archive-top{align-items:start;flex-direction:column}}
+@media(max-width:520px){.container,.hero-grid{width:min(100% - 32px,1180px)}section{padding:75px 0}.hero h1{font-size:55px}.hero-grid{padding-top:140px;padding-bottom:70px}.remedy-grid,.archive-track{grid-template-columns:1fr}.course-banner{display:block}.course-banner .btn{margin-top:20px}h2{font-size:47px}}
+</style>
+</head>
+<body>
+
+<header id="header"><div class="container nav">
+<a class="brand" href="#"><img src="https://tibbenabwi-iom.org/wp-content/uploads/2025/12/nature.png">Tibbe-E-Nabwi</a>
+<nav class="links"><a href="#about">About</a><a href="#course">Course</a><a href="#remedies">Remedies</a><a href="#archive">Archive</a><a href="#contact">Contact</a></nav>
+<a href="#contact" class="btn">Register Now</a>
+</div></header>
+
+<main>
+<section class="hero">
+<!-- REPLACE hero.mp4 WITH YOUR VIDEO -->
+<video class="hero-video" autoplay muted loop playsinline poster="https://tibbenabwi-iom.org/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-19-at-3.27.22-PM-723x1024.jpeg"><source src="hero.mp4" type="video/mp4"></video>
+<div class="hero-grid">
+<div class="hero-copy reveal">
+<div class="eyebrow">Prophetic Medicine · Knowledge · Wellness</div>
+<h1>Heal with<br><em>Tibb-e-Nabwi.</em></h1>
+<p>Tibb-e-Nabwi, or Prophetic Medicine, refers to the health and healing guidance found in the teachings of the Prophet Muhammad (Peace Be Upon Him).</p>
+<div><a href="#course" class="btn">Explore the Course →</a><a href="#about" class="btn ghost" style="margin-left:8px;color:white;border-color:rgba(255,255,255,.35)">Discover More</a></div>
+</div>
+<div class="hero-side"><div class="eyebrow">A Timeless Practice</div><p>Exploring the connection between faith, knowledge, natural remedies and holistic wellbeing.</p></div>
+</div>
+<div class="hero-bottom"><div class="container hero-meta"><span>Institute of Tibb-e-Nabwi Medicine</span><span class="scroll-line">Scroll to explore</span><span>Since 2020</span></div></div>
+</section>
+
+<section class="intro" id="about"><div class="container intro-grid">
+<div class="intro-image reveal"><img src="https://tibbenabwi-iom.org/wp-content/uploads/2025/12/fe8c5ac0dace48d095e45c2156df863d.avif"><div class="image-tag"><span>90+</span>Natural remedies and practices explored</div></div>
+<div class="intro-copy reveal"><div class="eyebrow">What is Tibb-e-Nabwi</div><h2>Guidance rooted in the Sunnah.</h2><p class="lead">Tibb-e-Nabwi, or Prophetic Medicine, refers to the health and healing guidance found in the teachings of the Prophet Muhammad (Peace Be Upon Him).</p>
+<div class="hadith"><div class="arabic">لِكُلِّ دَاءِ دَوَاءٌ فَإِذَا أُصِيبَ دَوَاءُ الدَّاءِ بَرَأَ بِإِذْنِ اللَّهِ</div><p>“There is a medicine for every disease, and when the medicine is applied to the disease it is cured by God's permission.”</p><small>Hadith #2204 · Sahih Muslim</small></div>
+<p class="lead">This timeless tradition offers remedies, practices, and lifestyle habits that promote health, balance, and harmony.</p></div>
+</div></section>
+
+<section class="founder"><div class="container founder-grid">
+<div class="sticky reveal"><img class="founder-img" src="https://tibbenabwi-iom.org/wp-content/uploads/2025/12/23a516_47c8ceade47245eda0a940f7aa37010bmv2.avif"><p class="caption"><b>Azmat Aapa</b>Founder, Nature's Choice & Institute of Tibb-e-Nabwi Medicine</p></div>
+<div class="reveal"><div class="eyebrow">About Us</div><h2>A journey built on knowledge & healing.</h2><div class="story">
+<div class="story-item"><span>01</span><div><h3>Founder of Nature's Choice</h3><p>Azmat Aapa is a leading practitioner of Tibb-e Nabwi and founder of Nature's Choice, offering over 90 natural remedies since 2020.</p></div></div>
+<div class="story-item"><span>02</span><div><h3>Educator & Author</h3><p>She has taught Tibb-e Nabwi, authored books, and developed remedies blending Sunnah wisdom with modern health needs.</p></div></div>
+<div class="story-item"><span>03</span><div><h3>International Impact</h3><p>Traveling across Pakistan and Canada, she delivers lectures, conducts clinics and promotes preventive care and holistic wellness.</p></div></div>
+<div class="story-item"><span>04</span><div><h3>The Mission</h3><p>Reviving Prophetic Medicine as a modern, practical approach to physical, emotional and spiritual wellbeing.</p></div></div>
+</div></div>
+</div></section>
+
+<section class="course" id="course"><div class="container">
+<div class="section-head reveal"><div class="eyebrow">Certified Course</div><h2>Tibb-e-Nabwi Course Outline 2026</h2><p class="lead">A structured curriculum covering healing, nutrition and hands-on learning.</p></div>
+<div class="course-layout">
+<nav class="rail"><a class="active" href="#books">Course Books</a><a href="#ailments">Sunnah Remedies</a><a href="#topics">Other Topics</a><a href="#nutrition">Nutrition</a><a href="#certificate">Certificate Course</a></nav>
+<div>
+<div class="course-block" id="books"><h3>Course Books</h3><ul class="clean-list"><li>Tibb-e-Nabwi by Ibn-ul-Qyyum</li><li>Hijamah book by Dr. Hasan Ali Amjed</li><li>Spiritual part of healing</li><li>Duas for different ailments</li><li>Counselling</li><li>Physical part of healing</li></ul></div>
+<div class="course-block" id="ailments"><h3>Sunnah remedies for major ailments</h3><div class="tags"><span>Headaches</span><span>Cold & Cough</span><span>Fever</span><span>Bronchitis</span><span>Vitiligo</span><span>Epilepsy</span><span>Depression</span><span>Magic / Jinn, etc</span></div></div>
+<div class="course-block" id="topics"><h3>Other Topics</h3><ul class="clean-list"><li>Kitchen cabinet remedies</li><li>Vinegar making</li><li>Sauerkraut</li><li>Hijamah training</li><li>Patient history sharing</li><li>Herbal garden</li></ul></div>
+<div class="course-block" id="nutrition"><h3>Nutrition</h3><ul class="clean-list"><li>Balanced diet</li><li>Favourable food combinations</li><li>Non-favourable food combinations</li><li>Key points for a good marital relationship</li></ul></div>
+<div class="course-block" id="certificate"><h3>Prophetic Medicine Certificate Course</h3><ul class="clean-list"><li>4th batch, starts 7 January 2026</li><li>Classes twice a week on Zoom</li><li>Mondays & Wednesdays · 10–11 am PKT</li><li>8 months duration</li></ul></div>
+<div class="course-banner"><div><h3>Begin your learning journey.</h3><p>4th Batch · 8 Months · Classes on Zoom · Fee PKR 45,000/=</p></div><a href="#contact" class="btn">Register Now →</a></div>
+</div></div></div></section>
+
+<section class="remedies" id="remedies"><div class="container"><div class="section-head reveal"><div class="eyebrow">Remedies</div><h2>Knowledge inspired by natural healing.</h2><p class="lead">Some of the categories explored throughout the course.</p></div>
+<div class="remedy-grid reveal">
+<div class="remedy-card"><span class="num">01</span><h3>Hydration & Digestion</h3><p>Date and cucumber pairing, lemon and honey water, and light meals for better digestion.</p></div>
+<div class="remedy-card"><span class="num">02</span><h3>Spiritual Relief</h3><p>Qur'anic water for healing, herbal teas with spiritual invocations and Ajwa date snacks.</p></div>
+<div class="remedy-card"><span class="num">03</span><h3>Detox & Immunity</h3><p>Black seed oil tonics, honey-based preparations and Senna Makki tea.</p></div>
+<div class="remedy-card"><span class="num">04</span><h3>Women & Family</h3><p>Fragrance-based relaxation, night-time teas and olive oil treatments.</p></div>
+<div class="remedy-card"><span class="num">05</span><h3>Digestive Health</h3><p>Lifestyle adjustments combined with natural treatments and herbal teas.</p></div>
+<div class="remedy-card"><span class="num">06</span><h3>Stress Relief</h3><p>Herbal blends, spiritual practices and prophetic ingredients such as musk and rose.</p></div>
+</div></div></section>
+
+<section class="archive" id="archive"><div class="container"><div class="archive-top reveal"><div><div class="eyebrow">The Institute Archive</div><h2>Moments that tell our story.</h2></div><p class="lead" style="max-width:350px">A visual archive for certificates, course flyers, workshops, seminars and milestones. Add your uploaded images here.</p></div>
+<div class="archive-track reveal">
+<div class="archive-card"><img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=700&q=80"><div><small>Certificate</small><p>Knowledge & Learning</p></div></div>
+<div class="archive-card"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=700&q=80"><div><small>Course</small><p>Learning Together</p></div></div>
+<div class="archive-card"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80"><div><small>Workshop</small><p>Shared Knowledge</p></div></div>
+<div class="archive-card"><img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=700&q=80"><div><small>Archive</small><p>Our Journey</p></div></div>
+</div></div></section>
+
+<section class="contact" id="contact"><div class="container contact-grid">
+<div class="reveal"><div class="eyebrow">Contact Us</div><h2>Begin your journey.</h2><div class="info-row"><small>Visit</small><p>Street #9, Kh-e-Seher, Phase #6, DHA, Karachi</p></div><div class="info-row"><small>Email</small><p>tibbenabwi.iom@gmail.com</p></div><div class="info-row"><small>Call</small><p>0321-266-0827</p></div></div>
+<form class="reveal"><div class="form-grid"><input class="field" placeholder="Full Name"><input class="field" type="email" placeholder="Email Address"><input class="field" placeholder="Phone Number"><input class="field" placeholder="City"><textarea class="field" placeholder="What are your expectations from this course?"></textarea></div><div class="form-actions"><button class="btn" type="submit">Submit Registration →</button></div></form>
+</div></section>
+</main>
+
+<footer><div class="container"><div class="footer-grid"><div><div class="footer-brand">Tibbe-E-Nabwi</div><p style="font-size:12px;line-height:1.8;margin-top:15px;max-width:330px">A journey of knowledge, faith and holistic wellbeing.</p></div><div><h4>Explore</h4><ul><li>About Us</li><li>Certified Courses</li><li>Remedies</li><li>The Institute Archive</li></ul></div><div><h4>Head Office</h4><ul><li>Karachi, Pakistan</li><li>tibbenabwi.iom@gmail.com</li><li>0321-266-0827</li></ul></div></div><div class="copyright"><span>© 2026 Nature's Choice</span><span>Institute of Tibb-e-Nabwi Medicine</span></div></div></footer>
+
+<script>
+const header=document.getElementById('header');
+window.addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>30));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');observer.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.querySelectorAll('.rail a').forEach(a=>a.addEventListener('click',()=>{document.querySelectorAll('.rail a').forEach(x=>x.classList.remove('active'));a.classList.add('active')}));
+document.querySelector('form').addEventListener('submit',e=>{e.preventDefault();const b=e.target.querySelector('button');b.textContent='Registration Submitted ✓';b.style.background='#b89a62'});
+</script>
+</body></html>
